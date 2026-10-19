@@ -25,7 +25,7 @@ app.get('/db-test', async (req, res) => {
 // GET existentes
 app.get('/usuarios', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM clientes');
+    const result = await pool.query('SELECT * FROM usuarios');
     res.json(result.rows);
   } catch (error) {
     console.error(error);
